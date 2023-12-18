@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend</title>
+
+
+    <script src="https://unpkg.com/three"></script>
+    <script src="https://unpkg.com/@seregpie/three.text-texture"></script>
+    <script src="https://unpkg.com/@seregpie/three.text-sprite"></script>
+
+  <script type="module" crossorigin src="/assets/index-53xsqduM.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three-F_QYV81H.js">
+  <link rel="modulepreload" crossorigin href="/assets/engine.io-parser-33FB7g9V.js">
+  <link rel="modulepreload" crossorigin href="/assets/@socket.io-3-vkxHAM.js">
+  <link rel="modulepreload" crossorigin href="/assets/engine.io-client-Uz0TRVm7.js">
+  <link rel="modulepreload" crossorigin href="/assets/socket.io-parser-QJaHYohl.js">
+  <link rel="modulepreload" crossorigin href="/assets/socket.io-client-IQIgtGCP.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-eHqBaE4Z.css">
+</head>
+
+<body id="body">
+
+    <div id="world-search">
+        <label for="worldname-input">World name:</label>
+        <input id="worldname-input" type="text">
+        <button id="search-button" onclick="
+         joinhWorld()
+        "
+        >Go</button>
+    </div>
+
+    <div id="inventory">
+        <div id="punch" class="inventory_tile utility active" data-inv-btn-item="punch" data-inv-btn-item-type="utility" data-inv-btn-item-id="x">
+            <img src="/assets/punch_icon-90Fy9nJp.png" class="inventory_img"/>
+        </div>
+        <div id="settings" class="inventory_tile clothing" data-inv-btn-item="settings" data-inv-btn-item-type="utility" data-inv-btn-item-id="x">
+            <img src="/assets/block_settings-U4C9P6Rl.png" class="inventory_img"/>
+        </div>
+        <div id="plant" class="inventory_tile seeds" data-inv-btn-item="seed" data-inv-btn-item-type="seed" data-inv-btn-item-id="1">
+            <img src="/assets/bedrock_seed-JYVinSmr.png" class="inventory_img"/>
+        </div>
+        <div id="plant2" class="inventory_tile seeds" data-inv-btn-item="seed" data-inv-btn-item-type="seed" data-inv-btn-item-id="2">
+            <img src="/assets/dirt_seed-tEFehdX2.png" class="inventory_img"/>
+        </div>
+        <div id="consume" class="inventory_tile consumeables" data-inv-btn-item="lsd" data-inv-btn-item-type="consumeable" data-inv-btn-item-id="x">
+            <img src="/assets/lsd-zTengpbI.png" class="inventory_img"/>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+function joinhWorld() {
+    console.log('btn ok 1')
+    let searchEvent = new Event('request-world-data');
+    document.dispatchEvent(searchEvent);
+}
+
+
+</script>
+
+</html>

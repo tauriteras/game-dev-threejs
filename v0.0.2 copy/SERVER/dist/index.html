@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend</title>
+
+    <script src="https://unpkg.com/three"></script>
+    <script src="https://unpkg.com/@seregpie/three.text-texture"></script>
+    <script src="https://unpkg.com/@seregpie/three.text-sprite"></script>
+
+  <script type="module" crossorigin src="/assets/index-VsBHXCUK.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three-F_QYV81H.js">
+  <link rel="modulepreload" crossorigin href="/assets/engine.io-parser-33FB7g9V.js">
+  <link rel="modulepreload" crossorigin href="/assets/@socket.io-3-vkxHAM.js">
+  <link rel="modulepreload" crossorigin href="/assets/engine.io-client-Uz0TRVm7.js">
+  <link rel="modulepreload" crossorigin href="/assets/socket.io-parser-QJaHYohl.js">
+  <link rel="modulepreload" crossorigin href="/assets/socket.io-client-IQIgtGCP.js">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #world-search {
+        position: absolute;
+        top: 5vh;
+        left: 3rem;
+
+        background-color: white;
+    }
+
+    #search-button {
+        width: 3rem;
+        background-color: green;
+    }
+
+
+</style>
+
+<body id="body">
+
+    <div id="world-search">
+        <label for="worldname-input">World name:</label>
+        <input id="worldname-input" type="text">
+        <button id="search-button" onclick="
+         joinhWorld()
+        "
+        >Go</button>
+    </div>
+
+</body>
+
+<script>
+
+function joinhWorld() {
+    console.log('btn ok 1')
+
+    let searchEvent = new Event('request-world-data');
+
+    document.dispatchEvent(searchEvent);
+}
+
+
+</script>
+
+</html>
